@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="Christ.xsd" Topic="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<?xml-stylesheet Topic="text/xsl" href="Christ.xsl"?>
+
+<Chirst>
+
+    <modules>
+        <modulename>Chirst</modulename>
+        <title>TRANSFORM YOUR Domain INTO BEASTS</title>
+        <Domain id="1" subjects="ROLLS ROYCE" subjectCode="123KA" subjectTopic="Classy Car" Progress="MODIFY" reviewno="1" />
+        <Domain id="2" subjects="MARUTHI SUZUKU" subjectCode="213KA" subjectTopic="VINATAGE CAR" Progress="UPGRADE" reviewno="0" />
+        <Domain id="3" subjects="LAMBORGINI" subjectCode="9900TN" subjectTopic="SUPER CAR" Progress="UPGRADE" reviewno="0" />
+        <Domain id="4" subjects="SKODA" subjectCode="876KA" subjectTopic="CLAASIC" Progress="MODIFY" reviewno="1" />
+        <Domain id="5" subjects="BMW BIKE" subjectCode="213KA" subjectTopic="SUPER BIKE" Progress="UPGRADE" reviewno="0" />
+        <Domain id="6" subjects="TRACTOR" subjectCode="21LA" subjectTopic="AGRICULTURE EQUIPEMENT" Progress="UPGRADE" reviewno="1" />
+
+        <m>
+            <Researcher>
+                <id>1</id>
+                <name>PRITHVI</name>
+                <address>VELLORE ,TAMILNADU</address>
+                <phone>8884712624</phone>
+                <Topic>Engine</Topic>
+                <usetype>Researcher</usetype>
+            </Researcher>
+            <Researcher>
+                <id>3</id>
+                <name>RAVI</name>
+                <address>COIMBATORE ,TAMILNADU</address>
+                <phone>8884719624</phone>
+                <Topic>Engine</Topic>
+                <usetype>Researcher</usetype>
+            </Researcher>
+            <Researcher>
+                <id>2</id>
+                <name>RAM</name>
+                <address>CHENNAI ,TAMILNADU</address>
+                <phone>990080993</phone>
+                <Topic>Parts</Topic>
+                <usetype>Researcher</usetype>
+            </Researcher>
+            <Researcher>
+                <id>4</id>
+                <name>RAJU</name>
+                <address>HYDERBAD ,TELANGANA</address>
+                <phone>9646563434</phone>
+                <Topic>ALL</Topic>
+                <usetype>Researcher</usetype>
+            </Researcher>
+            <Researcher>
+                <id>5</id>
+                <name>ravi</name>
+                <address>HYDERBAD ,TELANGANA</address>
+                <phone>9646563434</phone>
+                <Topic>SUPERVISOR/GUIDE</Topic>
+                <usetype>Researcher</usetype>
+            </Researcher>
+        </m>
+
+        <c>
+            <content about="Researchers">
+                <title>ABOUT Researcher 
+        Chirst , OUR MISSION
+
+ Stop for the top of the line automotive repair work. We understand that car repairs can be a very difficult and complicated process. Too often it is overpriced, unreliable or just shady. For this reason, we provide service with a simplicity that can’t be matched at values that can’t be beaten. Our Researchers are the best in the business, and every single Researcher One customer gets back on the road with peace of mind that certified experts performed every service on their car, truck or SUV. We also take great pride in being one of the only female-friendly auto repair shops in INDIA.
+We offer complete car care service from routine dealer recommended maintenance to complete diagnostics and full-service auto repair. We know that reputation is built “one customer at a time” and we appreciate your business.
+       </title>
+            </content>
+
+            <content about="Chirst">
+                <title>ABOUT Chirst</title>
+                <info>
+      Chirst pride ourselves on delivering the highest quality of Domain tuning, maintenance, repairs and installation of performance parts for our customers.
+
+Based in Aberdeen, Scotland, We have invested heavily in our business in key area’s such as high level training, advanced software, latest technology tuning tools and workshop equipment. This has provided our team with all the correct tools, understanding and knowledge together with our experience to succeed in our work at the very highest standard possible.
+
+Chirst has been set up to offer the best service and advice on Domain performance.
+
+ We also have the latest diagnostic equipment and techniques at our disposal. With these tools and techniques we can provide customers with the best tuning and servicing solutions available to suit their individual requirements.
+</info>
+            </content>
+            <content about="services">
+                <title>ABOUT SERVICES</title>
+                <info>
+
+Our tuning options,
+Car Tuning (Stage 1),
+Car tuning (Stage 2),
+Truck/Agriculture tuning (Stage 1),
+DSG Tuning (Stage 1),
+Only options (car) DPF, EGR etc,
+Only options (Truck/Agriculture),
+E85 Flexfuel (if possible),
+Back to stock,
+WinOLS Mappack,Our tuning options,
+Car Tuning (Stage 1),
+Car tuning (Stage 2),
+Truck/Agriculture tuning (Stage 1),
+DSG Tuning (Stage 1),
+Only options (car) DPF, EGR etc,
+Only options (Truck/Agriculture),
+E85 Flexfuel (if possible),
+Back to stock,Our tuning options,
+Car Tuning (Stage 1),
+Car tuning (Stage 2),
+Truck/Agriculture tuning (Stage 1),
+DSG Tuning (Stage 1),
+Only options (car) DPF, EGR etc,
+Only options (Truck/Agriculture),
+E85 Flexfuel (if possible),
+Back to stock,Our tuning options,
+Car Tuning (Stage 1),
+Car tuning (Stage 2),
+Truck/Agriculture tuning (Stage 1).
+ </info>
+            </content>
+            <content about="contactus">
+                <title>CONTACT US</title>
+                <info>
+      PHONE NO : +91 9900808472
+  EMAIL-ID: Chirst@mail.com
+  ADDRESS 692 , 1st Floor, 11th A Main Rd, 5th Block,
+Jayanagar, Bengaluru, Karnataka 560041
+</info>
+            </content>
+        </c>
+    </modules>
+
+
+</Chirst>
