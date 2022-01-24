@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<researchers>
+    <researcher memberid = "10001">
+         <name> Rahul Sharma </name>
+         <gender> male </gender> 
+         <subjects>
+           <subject name= "Math"  />
+           <subject name= "Science" />
+           <subject name= "Social Science"  />
+         </subjects>
+    </researcher >
+    <researcher memberid = "10002">
+         <name> Ankit Sharma </name>
+         <gender> male </gender> 
+         <subjects>
+           <subject name= "Math"  />
+           <subject name= "Science" />
+           <subject name= "Social Science"  />
+         </subjects>     
+    </researcher >
+    <researcher memberid = "10003">
+        <name> Rahul Sharma </name>
+        <gender> male </gender> 
+        <subjects>
+          <subject name= "Math"  />
+          <subject name= "Science"  />
+          <subject name= "Social Science"/>
+        </subjects>
+        <researcher memberid = "1000">
+            <name> Rahul Sharma </name>
+            <gender> male </gender> 
+            <subjects>
+              <subject name= "Math"  />
+              <subject name= "Science"/>
+              <subject name= "Social Science" />
+            </subjects>
+            <researcher memberid = "10005">
+                <name> Rahul Sharma </name>
+                <gender> male </gender> 
+                <subjects>
+                  <subject name= "Math"  />
+                  <subject name= "Science" />
+                  <subject name= "Social Science" />
+                </subjects>
+    </researcher>
+
+</researcher>

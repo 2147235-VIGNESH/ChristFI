@@ -1,0 +1,289 @@
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:  rgb(203, 235, 22);
+    letter-spacing: 1px;
+}
+
+h1, h2{
+    /*remove bold*/
+    font-weight: normal;
+
+}
+
+#wrapper {
+
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    box-shadow: 6px 2px 5px rgba(230, 7, 7, 0);
+    padding: 0 0 20px;
+    border: 1px solid  rgb(14, 191, 235);
+
+}
+
+#page-top{
+    background:  rgb(218, 13, 13);
+    padding: 10px 0;
+}
+
+#page-top h1, 
+#page-top p{
+    text-align: center;
+    margin: 0.5em 0;
+}
+
+#page-top input{ 
+    width: 90% ;
+    max-width: 250px;
+    margin: 20px auto;
+    display: block;
+    padding: 8px;
+    border: 1px solid rgb(24, 116, 169);
+    font-size: 1em;
+    color: bisque;
+}
+
+#check{
+    max-width: 280px;
+    margin: 10% auto;
+    text-align: center;
+}
+
+#check #hide{ 
+    width: 10%;
+    margin: 0;
+    display: inline-block;
+}
+
+#add-item{
+    width: 400px;
+    margin: 0 auto;
+}
+
+#add-item input{
+    width: 300px;
+    display: block;
+    margin: 20px 0px 0px 0px;
+    padding: 0.5em;
+    border: 1px solid  rgb(216,216,216);
+    font-size: 1em;
+    border-radius: 2px 0 0 2px;
+    float: left;
+
+}
+#add-item button{
+    width: 100px;
+    cursor: pointer;
+    color:rgb(225, 237, 240);
+    background-color: aqua;
+    padding: 0.5em 20px;
+    border: 1px solid #00ff60;
+    font-size: 1em;
+    margin: 20px 0 0 0 ;
+
+}
+
+#courselist-list{ 
+    margin: 2em;
+}
+
+#courselist ul {
+
+    /* remove bullet points */ 
+    list-style: none;
+    /*remove default padding */ 
+
+    padding: 0; 
+
+
+}
+
+#courselist li{ 
+    padding: 1em; 
+    border-left: 5px solid rgb(216,216,216);
+    margin: 1.5em 1em;
+}
+
+.Delete {
+    float: right;
+    background:rgb(218, 13, 13);
+    padding: 7px; 
+    border-radius: px;
+    cursor: pointer;
+    color: blanchedalmond;
+
+}
+
+.Delete:hover{ 
+    background: rebeccapurple;
+}
+
+
+
+
+
+#courselist li:hover {
+     border-color: #00ff60
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+	padding: 0;
+	background: rgb(187, 222, 240);
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+h3 {
+	font-size: 1em;
+	font-weight: 700;
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.wrapper {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.app {
+	margin-top: 2em;
+	width: 100%;
+}
+
+.app input {
+	padding-left: .65em;
+	font-size: 1em;
+	font-weight: 400;
+	color: rgba(0, 0, 0, 0.4);
+	width: 100%;
+	line-height: 3em;
+	border-radius: 0;
+	background: none;
+	border: none;
+	border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.app input::placeholder {
+	font-weight: 400;
+	color: inherit;
+}
+
+.app input:focus {
+	outline: none;
+}
+
+.favs, .tasks, .favs ul li, .tasks ul li, .btns, footer {
+	display: flex;
+}
+
+.favs {
+	margin-bottom: 1em;
+}
+
+.favs, .tasks {
+	margin-top: 1em;
+	flex-direction: column;
+	text-align: center;
+}
+
+.btns {
+	flex-direction: row;
+	margin-right: -18px;
+}
+
+ul li {
+	color: #666;
+	font-size: 1em;
+	font-weight: 400;
+	background: white;
+	padding: .75em 1.2em;
+	border-radius: .3em;
+	margin: .5em 0;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	line-height: 1.5;
+}
+
+.favs ul li svg, .tasks ul li svg {
+	height: 36px;
+	margin-left: 1.2em;
+}
+
+.favs .fav {
+	fill: #FFD842;
+}
+
+.bin {
+	fill: tomato;
+	transform: scale(0.75);
+}
+
+.cap {
+	transition: transform 0.2s;
+}
+
+.fav {
+	fill: lightgray;
+	transition: transform 0.2s, fill 0.5s;
+	transform: scale(0.75);
+}
+
+footer {
+	flex-direction: column;
+	align-items: center;
+	margin: 3em 0;
+}
+
+footer p {
+	margin: 0;
+	padding: 0;
+	height: 1.5em;
+	font-size: .75em;
+	color: rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: 768px) {
+
+	.app input {
+		font-size: 1.2em;
+	}
+
+	.delete {
+		height: 1.2em;
+	}
+
+	.favs, .tasks {
+		text-align: left;
+	}
+
+	.favs li, .tasks li {
+		font-size: 1.25em;
+	}
+
+	li svg:hover {
+		cursor: pointer;
+	}
+
+	.fav, .bin {
+		transform: scale(0.85);
+	}
+
+	.fav:hover {
+		transform: scale(0.9);
+	}
+
+	.bin:hover .cap {
+		transform: rotate(-9deg);
+	}
+
+}
