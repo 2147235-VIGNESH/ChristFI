@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<<<<<<< HEAD
 <researchers>
     <researcher memberid = "10001">
          <name> Rahul Sharma </name>
@@ -46,3 +47,12 @@
     </researcher>
 
 </researcher>
+=======
+<CHRIST> Branch </CHRIST>
+<Researcher>Mani</Researcher>
+<Topic>Data Science</Topic>
+<Funding>Money </Funding>
+<Progress>almost done ?</Progress>
+
+ 
+>>>>>>> ef8085dbb7cef843e32d248a3f77f218dcf9b4a5
