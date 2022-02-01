@@ -1,0 +1,87 @@
+
+ <!-- Create Cookies -->
+ <div class="container">
+    <h2 class="SubHeading">Create a Student</h2>
+    
+    <div class="InputElements">
+        <p>Enter UserNAME</p> 
+        <input class="input" id="createInputKey"/>
+    </div>
+    <div class="InputElements">
+        <p>Enter Password</p>
+        <input class="input password" id="createInputValue"/>
+    </div>
+    <div class="InputElements">
+        <p>Provide Expiry Date</p>
+        <input class="input" type="date" id="createDate" />
+    </div>
+     <div class="InputElements">
+        <p>Description</p>
+        <input class="input"  id="des" />
+    </div>
+    <div class="row">
+        <div class="col-3"> <button onclick="createCookies()" id="create" class="btn">COOKIES</button></div>
+   
+   
+</div>
+<div class="row">
+   <div class="col-3">  <button type="button" class="btn" id="save_value">LOCAL</button></div>
+
+   
+</div>
+<div class="row">
+        
+   <div class="col-3">  <button type="button" class="btn" id="save_s">Session</button></div>
+   
+</div>
+</div>
+
+</div>
+<div class="col-3">
+<!-- Update Cookies -->
+<div class="container">
+    <h2 class="SubHeading">Update a Student</h2>
+    
+    <div class="InputElements">
+        <p>Enter Username</p> 
+        <input class="input" id="updateInputKey"/>
+    </div>
+    <div class="InputElements">
+        <p>Enter New Password</p>
+        <input class="input" input id="updateInputValue"/>
+    </div>
+    <div class="InputElements">
+        <p class="InputElements">Change Expiry Date</p>
+        <input class="input" type="date" id="updateDate" />
+    </div>
+    
+    <button onclick="updateCookies()" id="update" class="btn">Update COOKIES</button>
+</div>
+</div>
+<div class="col-3">
+<!-- Delete Cookies -->
+<div class="container">
+    <h2 class="SubHeading">Delete a Student</h2>
+
+    <div class="InputElements">
+        <p>Delete Student</p>
+        <input class="input" id="deleteInput"/>
+    </div>
+
+    <button onclick="deleteCookies()" id="delete" class="btn">Delete COOKIES</button>
+</div>
+</div>
+<div class="col-3">
+  <!-- Display Cookies -->
+<div class="container">
+    <h2 class="SubHeading" class="responsive">Display a Student</h2>
+
+    <button onclick="displayCookies()" id="displayButton" class="btn">Display COOKIES</button>
+    <div id="display" ></div>
+</div>
+
+</div>
+<script src="index.js"></script>
+<link rel="stylesheet" type="text/css" href="style2.css">
+
+</div>

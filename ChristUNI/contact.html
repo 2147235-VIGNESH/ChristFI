@@ -9,6 +9,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
 <script src="https://kit.fontawesome.com/e7e8a87f23.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -30,7 +32,7 @@
 		<h1>Contact Us</h1>
 		
 	</section>
-	<!-- ------contact------ -->
+
 	<head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,6 +47,258 @@
 	
 	<title>Responsive Login Form Sign In Sign Up</title>
 </head>
+
+<!--
+<form action="#" id="registration">
+    <h1>Register an Account</h1>
+
+    <p>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" />
+    </p>
+
+    <p>
+        <label for="password1">Password:</label>
+        <input type="password" id="password1" name="password1" />
+    </p>
+
+    <p>
+        <label for="password2">Confirm Password:</label>
+        <input type="password" id="password2" name="password2" />
+    </p>
+
+    <p>
+        <input type="radio" id="genderM" name="gender" value="male" />
+        <label for="genderM">Male</label>
+    </p>
+
+    <p>
+        <input type="radio" id="genderF" name="gender" value="female" />
+        <label for="genderF">Female</label>
+    </p>
+
+    <p>
+        <label for="domain">Your domain</label>
+        <select name="domain" id="domain">
+            <option value="">Choose Your domain</option>
+            <option value="africa">Africa</option>
+            <option value="northamerica">North America</option>
+            <option value="southamerica">South America</option>
+            <option value="antarctica">Antarctica</option>
+            <option value="asia">Asia</option>
+            <option value="australia">Australia</option>
+            <option value="europe">Europe</option>
+        </select>
+    </p>
+
+    <p>
+        <label for="desc">Describe yourself</label>
+        <textarea name="description" id="desc" cols="30" rows="10"></textarea>
+    </p>
+
+    <p>
+        <button type="submit" id="register">Register!</button>
+    </p>
+
+</form>
+<script src="script.js"></script>
+
+<div id="errorMessages"></div>
+
+-->
+<body>
+	<div class="container">
+		<h1>REGISTER</h1>
+		<form id="registration_form">
+			<div>
+				<input type="text" id="form_fname" name="" required="">
+				<span class="error_form" id="fname_error_message"></span>
+				<label>
+					First Name
+				</label>	
+			</div>
+			<div>
+				<input type="text" id="form_pno" name="" required="">
+				<span class="error_form" id="pno_error_message"></span>
+				<label>
+					phone Number
+				</label>	
+			</div>
+			<div>
+				<input type="email" id="form_email" name="" required="">
+				<span class="error_form" id="email_error_message"></span>
+				<label>Email id</label>	
+			</div>
+			<div>
+				<input type="password" id="form_password" name="" required="">
+				<span class="error_form" id="password_error_message"></span>
+				<label>Password</label>	
+			</div>
+			<div>
+				<input type="password" id="form_retype_password" name="" required="">
+				<span class="error_form" id="retype_password_error_message"></span>
+				<label>Re-Enter Password</label>	
+			</div>
+			<input type="submit" value="Register" name="">
+		</form>
+	</div>
+	<script type="text/javascript">
+      $(function() {
+
+         $("#fname_error_message").hide();
+         $("#pno_error_message").hide();
+         $("#email_error_message").hide();
+         $("#password_error_message").hide();
+         $("#retype_password_error_message").hide();
+
+         var error_fname = false;
+         var error_pno = false;
+         var error_email = false;
+         var error_password = false;
+         var error_retype_password = false;
+
+         $("#form_fname").focusout(function(){
+            check_fname();
+         });
+         $("#form_pno").focusout(function() {
+            check_pno();
+         });
+         $("#form_email").focusout(function() {
+            check_email();
+         });
+         $("#form_password").focusout(function() {
+            check_password();
+         });
+         $("#form_retype_password").focusout(function() {
+            check_retype_password();
+         });
+
+         function check_fname() {
+			var pattern = /(^[A-Za-z]{3,16})([ ]{0,1})([A-Za-z]{3,16})?([ ]{0,1})?([A-Za-z]{3,16})?([ ]{0,1})?([A-Za-z]{3,16})/;
+            var pattern = /^[a-zA-Z]*$/;
+            var fname = $("#form_fname").val();
+            if (pattern.test(fname) && fname !== '') {
+               $("#fname_error_message").hide();
+               $("#form_fname").css("border-bottom","2px solid #34F458");
+            } else {
+               $("#fname_error_message").html("Should contain only Characters");
+               $("#fname_error_message").show();
+               $("#form_fname").css("border-bottom","2px solid #F90A0A");
+               error_fname = true;
+            }
+         }
+
+         function check_pno() {
+			var pattern = /^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/;
+            var pno = $("#form_pno").val()
+            if (pattern.test(pno) && pno !== '') {
+               $("#pno_error_message").hide();
+               $("#form_pno").css("border-bottom","2px solid #34F458");
+            } else {
+               $("#pno_error_message").html("Phone number field should have exactly 10 digits and only num");
+               $("#pno_error_message").show();
+               $("#form_pno").css("border-bottom","2px solid #F90A0A");
+               error_pno = true;
+            }
+         }
+
+         function check_password() {
+			var pattern = /^(?:(?:\+|0{0,2})91(\s*|[\-])?|[0]?)?([6789]\d{2}([ -]?)\d{3}([ -]?)\d{4})$/;
+            var password_length = $("#form_password").val().length;
+            if (password_length < 8) {
+               $("#password_error_message").html("Atleast 8 Characters and should cointain special symbol");
+               $("#password_error_message").show();
+               $("#form_password").css("border-bottom","2px solid #F90A0A");
+               error_password = true;
+            } else {
+               $("#password_error_message").hide();
+               $("#form_password").css("border-bottom","2px solid #34F458");
+            }
+         }
+
+         function check_retype_password() {
+            var password = $("#form_password").val();
+            var retype_password = $("#form_retype_password").val();
+            if (password !== retype_password) {
+               $("#retype_password_error_message").html("Passwords Did not Matched");
+               $("#retype_password_error_message").show();
+               $("#form_retype_password").css("border-bottom","2px solid #F90A0A");
+               error_retype_password = true;
+            } else {
+               $("#retype_password_error_message").hide();
+               $("#form_retype_password").css("border-bottom","2px solid #34F458");
+            }
+         }
+
+         function check_email() {
+            var pattern = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+            var email = $("#form_email").val();
+            if (pattern.test(email) && email !== '') {
+               $("#email_error_message").hide();
+               $("#form_email").css("border-bottom","2px solid #34F458");
+            } else {
+               $("#email_error_message").html("Invalid Email");
+               $("#email_error_message").show();
+               $("#form_email").css("border-bottom","2px solid #F90A0A");
+               error_email = true;
+            }
+         }
+
+         $("#registration_form").submit(function() {
+            error_fname = false;
+            error_pno = false;
+            error_email = false;
+            error_password = false;
+            error_retype_password = false;
+
+            check_fname();
+            check_pno();
+            check_email();
+            check_password();
+            check_retype_password();
+
+            if (error_fname === false && error_pno === false && error_email === false && error_password === false && error_retype_password === false) {
+               alert("Registration Successfull");
+               return true;
+            } else {
+               alert("Please Fill the form Correctly");
+               return false;
+            }
+
+
+         });
+      });
+   </script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
 <body>
 	<div class="login">
 		<div class="login__content">
@@ -52,21 +306,48 @@
 				<img src="assets/img/img-login.svg" alt="">
 			</div>
 
+
+			<div class="form">
+				<form method="post" action="home.html" onsubmit="return validate(event);">
+					<div class="form_wrap">
+						<label for="uname">Username</label>
+						<div class="input_field">
+							<input type="text" class="input" name="username" id="uname">
+							<i class="fas fa-user"></i>
+						</div>
+						<div class="error_msg" id="un_err_msg"></div>
+					</div>
+					<div class="form_wrap">
+						<label for="password">Password</label>
+						<div class="input_field">
+							<input type="password" class="input" name="password" id="password">
+							<i class="fas fa-key"></i>
+						</div>
+						<div class="error_msg" id="pw_err_msg"></div>
+					</div>
+					<div class="form_wrap">
+						<input type="submit" value="Login">
+					</div>
+				</form>
+			</div>
+
+			
+<script src="scripts.js"></script>
+		</div>
+-->
+<!--
 			<div class="login__forms">
 				<form action="" class="login__registre" id="login-in">
 					<h1 class="login__title">Sign In</h1>
 
 					<div class="login__box">
 						<i class='bx bx-user login__icon'></i>
-						<input type="text"  id="fname" placeholder="first name" class="form-control validate login__input">
+						<input type="text"  id="name" placeholder="first name"  class="form-control validate login__input">
 					</div>
-					<div class="login__box">
-						<i class='bx bx-user login__icon'></i>
-						<input type="text" id="lname" placeholder="last name" class="form-control validate login__input">
-					</div>
+
 					<div class="login__box">
 						<i class='bx bx-dialpad login__icon'></i>
-						<input type="phone" id="pno" placeholder="phone number" class="form-control validate login__input">
+						<input type="phone" id="pno" placeholder="phone number"   class="form-control validate login__input ">
 					</div>
 
 					<div class="login__box">
@@ -81,25 +362,73 @@
 
 					<a href="#" class="login__forgot">Forgot password?</a>
 
-					<a href="#" class="login__button">Sign In</a>
+					<a href="#" id="submit" class="login__button">Sign In</a>
 
 					<div>
 						<span class="login__account">Don't have an Account ?</span>
 						<span class="login__signin" id="sign-up">Sign Up</span>
 					</div>
+				-->
 				</form>
-
+			
+<!--
+				
+<div class="wrapper">
+	<div class="header">
+		<div class="logo">
+			<p>Coding Market</p>
+		</div>
+		<div class="menu">
+			<ul>
+				<li class="active"><a>Login</a></li>
+				<li><a>Aboutus</a></li>
+			</ul>
+		</div>
+	</div>
+	-->
+	<!--
+	<div class="main_container">
+		<div class="main_item login_wrap" style="display: block;">
+			<div class="title">Nice to see you again!!</div>
+			<div class="form">
+				<form method="post" action="home.html" onsubmit="return validate(event);">
+					<div class="form_wrap">
+						<label for="uname">Username</label>
+						<div class="input_field">
+							<input type="text" class="input" name="username" id="uname">
+							<i class="fas fa-user"></i>
+						</div>
+						<div class="error_msg" id="un_err_msg"></div>
+					</div>
+					<div class="form_wrap">
+						<label for="password">Password</label>
+						<div class="input_field">
+							<input type="password" class="input" name="password" id="password">
+							<i class="fas fa-key"></i>
+						</div>
+						<div class="error_msg" id="pw_err_msg"></div>
+					</div>
+					<div class="form_wrap">
+						<input type="submit" value="Login">
+					</div>
+				</form>
+			</div>
+			
+<script src="scripts.js"></script>
+		</div>
+	-->
+			<!--
 				<form action="" class="login__create none" id="login-up">
 					<h1 class="login__title">Create Account</h1>
 
 					<div class="login__box">
 						<i class='bx bx-user login__icon'></i>
-						<input type="text" placeholder="Username" class="login__input">
+						<input type="text" placeholder="Username" reg = "/(^[A-Za-z]{3,16})([ ]{0,1})([A-Za-z]{3,16})?([ ]{0,1})?([A-Za-z]{3,16})?([ ]{0,1})?([A-Za-z]{3,16})/" class="login__input">
 					</div>
 
 					<div class="login__box">
 						<i class='bx bx-at login__icon'></i>
-						<input type="text" placeholder="Email" class="login__input">
+						<input type="text" placeholder="Email" reg = "/^([a-zA-Z0-9]{8,20}@(christuniversity.in))$/" class="login__input">
 					</div>
 
 					<div class="login__box">
@@ -123,36 +452,7 @@
 			</div>
 		</div>
 	</div>
-
-	<!--===== MAIN JS =====-->
-	<script src="buttons1.js"></script>
-</body>
-</html>
-
-		<div class="map">
-		<iframe src="https://www.google.com/maps/embed?pb=!4v1641872142308!6m8!1m7!1sCAoSLEFGMVFpcE12MnZ3OEZoWnRPODZnMmNYaDdzWE5SUEtHX3BSZW1VT3gtRUVf!2m2!1d12.934874!2d77.605994!3f220!4f20!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-		<div class="address">
-		<i class="fas fa-map-marker-alt"></i>
-		<p>
-			Dharmaram College Post, Hosur Road, Bengaluru - 560029,
-			Karnataka, India</p>
-	</div>
-	<div class="address">
-		<i class="fas fa-phone"></i>
-		<p>Tel: +91 804012 9100 / 9600</p>
-		
-	</div>
-	<div class="address">
-		<i class="fas fa-envelope"></i>
-		<p> mail@christuniversity.in</p>
-		
-	</div>
-
-
-
-	</div>
-
-			
+-->
 	</section>
 	
 
@@ -162,7 +462,7 @@
 		<p>All rights reserved for this website by Vignesh Saminathan </p>
 	</section>
 	<div>
-		<src="validations.js"></script>
+		<src="buttons1.js"></script>
 
 	</div>
 	
